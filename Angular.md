@@ -1,3 +1,7 @@
+# CLI
+ng generate application [name-in-kebab-case] {--project [pname]}
+ng generate component [name-in-kebab-case] {--project [pname]}
+
 # ngModel
 ```
 import { FormsModule } from '@angular/forms';
