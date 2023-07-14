@@ -77,7 +77,7 @@ git push origin +TKS-247
 
 
 
-Lokális változások eldobása (ezzel óvatosan):
+drop all local changes (warning):
 git reset --hard
 
 
@@ -96,18 +96,20 @@ This little guide will show you how to do that with PhpStorm:
 
 
 # Rebase feature branch to develop
+```
 1. git rebase develop
 2. (resolve conflict)
 3. (git rebase --abort)
 4. git push --force
-
+```
 # Rebase resolve conflict
+```
 1. git diff --name-only --diff-filter=U --relative
 2. (edit files)
 3. git add (conflictedFiles)
 4. git rebase --continue
 5. edit commit message (:q)
-
+```
 
 
 # Update project (svn up megfelelője)
@@ -116,6 +118,7 @@ https://happygitwithr.com/pull-tricky.html
 
 
 # 1. stash:
+```
 git fetch
 git stash save
 git pull
@@ -123,15 +126,20 @@ git stash pop
 (resolve conflict)
 (git reset)
 (git stash drop)
+```
 # 2. commit + merge
+```
 git commit
 git fetch
 git pull
 (resolve conflict)
+```
 # 3. commit + rebase
+```
 git commit
 git fetch
 git pull --rebase
 (git rebase --abort)
 (OR 100 x resolve conflict)
+```
 # 4. tmp-branch + commit + checkout + (merge OR cherry-pick) ...
