@@ -23,4 +23,6 @@ import { FormsModule } from '@angular/forms';
 export class CustomComponent {
   @Input()  componentData: number;
   @Output() componentDataChange = new EventEmitter<number>();
+  ***
+    this.componentDataChange.emit(value);
 ```
