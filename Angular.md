@@ -27,7 +27,7 @@ export class CustomComponent {
   ***
     this.componentDataChange.emit(value);
 ```
-# HttpClient (default An gular codec is buggy)
+# HttpClient (default Angular codec is buggy)
 
 ```
 import { Injectable } from '@angular/core';
