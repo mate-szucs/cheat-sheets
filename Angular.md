@@ -57,14 +57,12 @@ export class HttpCodecService implements HttpParameterCodec {
 ```
             let httpParams = new HttpParams({ encoder: new HttpCodecService() });
             httpParams = httpParams.set('emailTel', emailTel);
-            httpParams = httpParams.set('method', method);
-            httpParams = httpParams.set('windowLocation', windowLocation);
             const httpOptions = {
                 headers: new HttpHeaders({
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
                 }),
             };
             const data: any = (await lastValueFrom(
-                this.httpClient.post(this.authUrl + AuthenticationService.api.auth0Passwordless + '/start', httpParams /*.toString()*/, httpOptions),
+                this.httpClient.post(this.authUrl + '/start', httpParams, httpOptions),
             )) as any;
 ```
