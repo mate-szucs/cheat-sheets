@@ -1,11 +1,13 @@
-# GET
+# import
 ```
 const axios = require('axios');
-
-// get raw response
+```
+# get raw response
+```
 axios.get("url",{ transformResponse: (r) => r }); 
-
-// concurrent response
+```
+# get concurrent responses
+```
 (async () => {
   try {
     const [response1, response2] = await axios.all([
